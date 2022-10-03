@@ -66,3 +66,22 @@ function largestProductinaSeries(n) {
    }
    return largest;
  }
+
+
+// Project Euler #9
+// Sepcial Pythagorean triplet
+function specialPythagoreanTriplet(n) {
+   let sumOfabc = n;
+   var a, c;
+ 
+   for (var b = 1; b < n; b++){
+       a = ((n * n / 2) - (n * b)) / (n - b);
+       if(Math.floor(a) === a) {
+           c = n - a - b;
+           break;
+       }
+   }
+   
+ 
+   return a * b * c;
+ }

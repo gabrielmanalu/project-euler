@@ -4,6 +4,8 @@ function largestGridProduct(arr) {
     let max = 0;
     let temp = 0;
   
+    const maxCheck = (n) => n > max ? max = n : max = max;
+  
     for (let i = 0; i < arr.length; i++){
         for (let j = 0; j < arr[i].length; j++){
             const limit = arr[i].length - 3;

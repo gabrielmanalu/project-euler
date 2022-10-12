@@ -102,3 +102,20 @@ function primeSummation(num) {
    return result;
  }
  
+
+ function primeSummation(num) {
+
+   let result = 0;
+   const isPrime = num => {
+       for(let i = 2; i <= Math.sqrt(num); i++) { 
+           if(num % i == 0) return false;
+        }
+        return true;
+   }
+ 
+   for(let i = 2; i < num; i++){
+       if (isPrime(i)) result +=i;
+   }
+   return result;
+ }
+ 

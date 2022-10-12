@@ -85,3 +85,20 @@ function specialPythagoreanTriplet(n) {
  
    return a * b * c;
  }
+
+
+ // Project Euler #10
+// Summation of Primes
+function primeSummation(num) {
+
+   let result = 0;
+   for(let i = 2; i < num; i++){
+       var isPrime = true;
+       for(let j = 2; j < i; j++){
+           if(i % j == 0 && i !== j)  isPrime = false;
+       }
+       if(isPrime) result += i;
+   }
+   return result;
+ }
+ 

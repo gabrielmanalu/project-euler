@@ -34,7 +34,7 @@ function largestGridProduct(arr) {
   }
   
 
-// Project Euler #11
+// Project Euler #12
 // Highly divisible tringular number
 function divisibleTriangleNumber(num) {
     var i = 1;

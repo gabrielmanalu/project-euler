@@ -33,3 +33,23 @@ function largestGridProduct(arr) {
     return max;
   }
   
+
+// Project Euler #11
+// Highly divisible tringular number
+function divisibleTriangleNumber(num) {
+    var i = 1;
+    var triangle = i;
+    while(divisorCnt(triangle) < num){
+        i++;
+        triangle += i;
+  }
+  return triangle;
+  }
+  
+  function divisorCnt(n){
+    let divisor = 0;
+    for (let i = 1; i < Math.sqrt(n); i++)
+    if (n % i === 0) divisor += 2;
+    if (n % Math.sqrt(n) === 0) divisor += 1;
+    return divisor;
+  }

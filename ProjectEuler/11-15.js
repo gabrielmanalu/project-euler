@@ -55,7 +55,15 @@ function divisibleTriangleNumber(num) {
   }
 
 
+
 // Project Euler #13
+// Large Sum (first 10 digits)
+function largeSum(arr) {
+    let result = Number(arr.map(str => Number(str)).reduce((a,b) => a + b, 0)
+                .toString().substring(0,11).replace('.', ''));
+    return result;
+  }
+  
 function largeSum(arr) {
     let result = Number(arr.map(str => Number(str)).reduce((a,b) => a + b, 0)
                 .toString().substring(0,11).replace('.', ''));

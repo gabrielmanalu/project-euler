@@ -53,3 +53,12 @@ function divisibleTriangleNumber(num) {
     if (n % Math.sqrt(n) === 0) divisor += 1;
     return divisor;
   }
+
+
+// Project Euler #13
+function largeSum(arr) {
+    let result = Number(arr.map(str => Number(str)).reduce((a,b) => a + b, 0)
+                .toString().substring(0,11).replace('.', ''));
+    return result;
+  }
+  

@@ -69,4 +69,36 @@ function largeSum(arr) {
                 .toString().substring(0,11).replace('.', ''));
     return result;
   }
+
+
+// Project Euler #14
+// Longest Collatz sequence
+function longestCollatzSequence(limit) {
+    const number = [];
+    for(let i = 2; i <= limit; i++){
+        let collatz = 1;
+        let j = i;
+        while (j != 1) {
+            if(j % 2 == 0){
+                j /= 2;
+                collatz++;          
+            } else {
+                j = 3 * j + 1;
+                collatz++;
+            }
+        }
+        number.push(collatz);
+    }
+  
+    var largest= 0;
+    for (let i=0; i<number.length; i++){
+        if (number[i]>largest) {
+            largest=number[i];
+        }
+    }
+    
+    const result  = number.indexOf(largest);
+    return result + 2;
+  }
+  
   

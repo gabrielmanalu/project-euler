@@ -80,7 +80,7 @@ function longestCollatzSequence(limit) {
         let j = i;
         while (j != 1) {
             if(j % 2 == 0){
-                j / 2;
+                j /= 2;
                 collatz++;          
             } else {
                 j = 3 * j + 1;

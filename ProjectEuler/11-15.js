@@ -101,4 +101,27 @@ function longestCollatzSequence(limit) {
     return result + 2;
   }
   
+
+// Project Euler #15
+// Lattice paths
+function latticePaths(gridSize) {
+    let n = gridSize;
+    let array = [];
   
+    for (let i = n; i >= 0; i--) {
+        let row = [];
+        row[n] = 1;
+        array.push(row);
+    }
+  
+    for (let i = n; i >= 0; i--) {
+        for (let j = n - 1; j >= 0; j--) {
+            if (i === n) {
+                array[i][j] = 1;
+            } else {
+                array[i][j] = array[i][j + 1] + array[i + 1][j]
+            }
+        }
+    }
+    return array[0][0];
+}
